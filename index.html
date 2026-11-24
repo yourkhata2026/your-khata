@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YOUR KHATA</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#e0f4ff;
+ color:#16445c;
+}
+
+header{
+ background:#75cafa;
+ padding:22px;
+ text-align:center;
+ color:#063b5a;
+}
+
+header h1{
+ margin:0;
+ font-size:30px;
+}
+
+main{
+ max-width:650px;
+ margin:auto;
+ padding:15px;
+}
+
+.card{
+ background:white;
+ padding:18px;
+ border-radius:16px;
+ margin:15px 0;
+ box-shadow:0 3px 12px #8dbbd355;
+}
+
+h2{color:#167db2}
+
+input,button{
+ width:100%;
+ padding:13px;
+ margin:7px 0;
+ border:1px solid #acd9ef;
+ border-radius:9px;
+ font-size:16px;
+}
+
+button{
+ background:#269bd5;
+ color:white;
+ border:0;
+ font-weight:bold;
+ cursor:pointer;
+}
+
+.delete{background:#df6969}
+.paid{background:#35a77a}
+
+.item{
+ background:#edf8ff;
+ padding:12px;
+ border-radius:10px;
+ margin:8px 0;
+ overflow-wrap:anywhere;
+}
+
+.amount{
+ font-size:27px;
+ font-weight:bold;
+ color:#1689bd;
+}
+
+.small{
+ font-size:13px;
+ color:#66889b;
+}
+
+nav{
+ display:flex;
+ gap:7px;
+ flex-wrap:wrap;
+}
+
+nav button{
+ flex:1;
+ min-width:90px;
+}
+
+footer{
+ text-align:center;
+ padding:20px;
+ color:#5084a0;
+}
+
+[hidden]{display:none!important}
+</style>
+</head>
+
+<body>
+
+<header>
+ <h1>YOUR KHATA</h1>
+ <p>YOUR MONEY, YOUR RECORD 💙</p>
+ <p>MADE IN INDIA 🇮🇳</p>
+</header>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOUR KHATA</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#f4f6fa;color:#18243a;
+ font-family:Arial,sans-serif;padding-bottom:90px
+}
+header{
+ background:#101c39;color:white;padding:22px 20px 65px;
+ border-radius:0 0 28px 28px
+}
+.top{display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+ width:42px;height:42px;background:#285ee7;
+ border-radius:13px;display:grid;place-items:center;
+ font-size:24px;font-weight:bold
+}
+.muted{font-size:11px;color:#9cabc6}
+h1{font-size:19px;margin:3px 0}
+main{max-width:500px;margin:-46px auto 0;padding:0 16px}
+.balance{
+ background:linear-gradient(135deg,#3475ff,#1644cb);
+ color:white;border-radius:24px;padding:22px;
+ box-shadow:0 12px 25px #315de344
+}
+.balance small{color:#d5e4ff}
+.big{font-size:34px;font-weight:bold;margin:5px 0 20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini{
+ background:#ffffff25;border-radius:14px;padding:13px;
+}
+.mini b{display:block;margin-top:5px;font-size:17px}
+.panel{
+ background:white;border-radius:18px;padding:16px;
+ margin-top:16px;box-shadow:0 3px 14px #172c4510
+}
+.month{
+ display:flex;justify-content:space-between;
+ align-items:center;color:#34445a;font-weight:bold
+}
+h3{font-size:16px;margin:0 0 14px}
+.transaction{
+ display:flex;align-items:center;gap:12px;
+ padding:12px 0;border-bottom:1px solid #edf0f5
+}
+.transaction:last-child{border:0}
+.symbol{
+ width:43px;height:43px;border-radius:14px;
+ display:grid;place-items:center;font-size:20px
+}
+.green{background:#d8f8e9}
+.orange{background:#fff0d1}
+.red{color:#e34c5c}
+.income{color:#00a778;font-weight:bold}
+.money{margin-left:auto;font-weight:bold}
+small{color:#8290a4}
+nav{
+ position:fixed;bottom:0;left:0;right:0;
+ background:white;display:flex;justify-content:space-around;
+ align-items:center;padding:10px 4px 17px;
+ box-shadow:0 -5px 20px #10204012;z-index:10
+}
+nav button{
+ background:none;color:#8491a5;border:0;
+ font-size:11px;padding:4px;display:flex;
+ flex-direction:column;align-items:center;gap:5px;
+ width:19%;font-weight:normal
+}
+nav button span{font-size:21px}
+nav button.active{color:#2864f0;font-weight:bold}
+nav .plus{
+ background:#2864f0;color:white;border-radius:50%;
+ width:46px;height:46px;font-size:27px;
+ box-shadow:0 5px 12px #2864f066
+}
+.page{display:none}
+.page.active{display:block}
+input,select{
+ width:100%;padding:13px;border:1px solid #dce4ef;
+ border-radius:10px;margin:7px 0;font-size:15px;
+ background:white;color:#18243a
+}
+.action{
+ background:#2864f0;color:white;border:0;
+ padding:13px;border-radius:11px;width:100%;
+ margin-top:9px;font-weight:bold;font-size:15px
+}
+.secondary{background:#718096}
+.delete{background:#dc5965}
+.item{
+ background:#f4f7fc;border-radius:12px;
+ padding:13px;margin:9px 0
+}
+.row{display:flex;justify-content:space-between;gap:8px}
+.bar{height:10px;background:#e7edf7;border-radius:20px}
+.fill{height:10px;background:#2864f0;border-radius:20px}
+.stat{background:#f1f5ff;padding:14px;border-radius:13px}
+.stat b{display:block;font-size:20px;margin-top:8px}
+.hidden{display:none}
+button{cursor:pointer}
+#modal{
+ position:fixed;inset:0;background:#101c3980;
+ display:none;align-items:flex-end;justify-content:center;
+ z-index:20
+}
+.sheet{
+ background:white;width:100%;max-width:500px;
+ padding:22px;border-radius:25px 25px 0 0
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="top">
+  <div class="brand">
+   <div class="logo">Y</div>
+   <div>
+    <div class="muted">WELCOME TO</div>
+    <h1>YOUR KHATA</h1>
+   </div>
+  </div>
+  <div style="font-size:23px">♧</div>
+ </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="page active">
+ <div class="balance">
+  <div class="row">
+   <small>Total Balance</small>
+   <small id="monthLabel">This month</small>
+  </div>
+  <div class="big" id="balance">₹0</div>
+  <div class="grid">
+   <div class="mini">
+    <small>🟢 Income</small>
+    <b id="income">₹0</b>
+   </div>
+   <div class="mini">
+    <small>🔴 Expenses</small>
+    <b id="expense">₹0</b>
+   </div>
+  </div>
+ </div>
+
+ <div class="panel month">
+  <span>This month</span>
+  <span>⌄</span>
+ </div>
+
+ <div class="panel">
+  <div class="row">
+   <h3>Recent Transactions</h3>
+   <small onclick="go('stats')">See all</small>
+  </div>
+  <div id="recent"></div>
+ </div>
+
+ <div class="panel">
+  <h3>Monthly Budget</h3>
+  <div class="row">
+   <small>Spent</small>
+   <b id="budgetSpent">₹0</b>
+  </div>
+  <div class="bar" style="margin-top:10px">
+   <div class="fill" id="budgetBar"></div>
+  </div>
+  <small id="budgetText"></small>
+ </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="page">
+ <div class="panel">
+  <h3>📊 Monthly Statistics</h3>
+  <input type="month" id="month" onchange="render()">
+  <div class="grid">
+   <div class="stat">Income<b id="statIncome">₹0</b></div>
+   <div class="stat">Expenses<b id="statExpense">₹0</b></div>
+  </div>
+  <h3 style="margin-top:22px">Income vs Expenses</h3>
+  <div id="chart"></div>
+  <h3 style="margin-top:22px">All Transactions</h3>
+  <div id="allTransactions"></div>
+  <button class="action" onclick="window.print()">Save PDF</button>
+ </div>
+</section>
+
+<!-- ADD -->
+<section id="add" class="page">
+ <div class="panel">
+  <h3>➕ Add New Record</h3>
+  <label>Type</label>
+  <select id="type">
+   <option value="income">Income</option>
+   <option value="expense">Expense</option>
+   <option value="receive">Udhar - Mujhe lena hai</option>
+   <option value="pay">Udhar - Mujhe dena hai</option>
+  </select>
+  <input id="name" placeholder="Name / Person / Item">
+  <input id="amount" type="number" min="0.01" placeholder="Amount ₹">
+  <input id="date" type="date">
+  <input id="category" placeholder="Category / Details">
+  <button class="action" onclick="addRecord()">Save Record</button>
+ </div>
+ <div class="panel">
+  <h3>💰 Set Monthly Budget</h3>
+  <input id="budgetInput" type="number" min="0" placeholder="Enter budget ₹">
+  <button class="action" onclick="saveBudget()">Save Budget</button>
+ </div>
+</section>
+
+<!-- KHATA -->
+<section id="khata" class="page">
+ <div class="panel">
+  <h3>📒 Your Udhar Khata</h3>
+  <input id="search" placeholder="Search person..." oninput="render()">
+  <div class="grid">
+   <div class="stat">To Receive<b id="toReceive">₹0</b></div>
+   <div class="stat">To Pay<b id="toPay">₹0</b></div>
+  </div>
+  <div id="debts"></div>
+ </div>
+</section>
+
+<!-- PROFILE -->
+<section id="profile" class="page">
+ <div class="panel">
+  <h3>👤 Your Profile</h3>
+  <div class="logo">Y</div>
+  <h2>YOUR KHATA</h2>
+  <p>Manage Your Money Smartly</p>
+ </div>
+
+ <div class="panel">
+  <h3>⚙️ Settings</h3>
+  <button class="action" onclick="toggleDark()">Light / Dark Mode</button>
+  <button class="action secondary" onclick="backup()">Download Backup</button>
+  <input type="file" id="restore" accept=".json" onchange="restore(event)">
+  <h3>PIN Lock</h3>
+  <input id="pin" type="password" inputmode="numeric" placeholder="Set 4 digit PIN">
+  <button class="action" onclick="setPin()">Set PIN</button>
+  <button class="action secondary" onclick="removePin()">Remove PIN</button>
+  <button class="action delete" onclick="resetData()">Delete All Data</button>
+ </div>
+
+ <div class="panel">
+  <h3>🎯 Savings Goal</h3>
+  <input id="goalName" placeholder="Goal name">
+  <input id="goalTarget" type="number" placeholder="Target ₹">
+  <input id="goalSaved" type="number" placeholder="Saved ₹">
+  <button class="action" onclick="saveGoal()">Save Goal</button>
+  <div id="goalView"></div>
+ </div>
+
+ <div class="panel">
+  <h3>🔔 Bill Reminders</h3>
+  <input id="remName" placeholder="Reminder name">
+  <input id="remDate" type="date">
+  <button class="action" onclick="addReminder()">Add Reminder</button>
+  <div id="reminders"></div>
+ </div>
+</section>
+
+</main>
+
+<!-- BOTTOM NAVIGATION -->
+<nav>
+ <button class="active" onclick="go('home',this)">
+  <span>⌂</span>Home
+ </button>
+ <button onclick="go('stats',this)">
+  <span>▥</span>Stats
+ </button>
+ <button class="plus" onclick="go('add',this)">+</button>
+ <button onclick="go('khata',this)">
+  <span>▢</span>Khata
+ </button>
+ <button onclick="go('profile',this)">
+  <span>♙</span>Profile
+ </button>
+</nav>
+
+<!-- PIN MODAL -->
+<div id="pinModal">
+ <div class="sheet">
+  <h3>YOUR KHATA Locked</h3>
+  <input id="checkPin" type="password" inputmode="numeric" placeholder="Enter PIN">
+  <button class="action" onclick="unlock()">Unlock</button>
+  <p id="pinMessage"></p>
+ </div>
+</div>
+
+<script>
+const KEY="YOUR_KHATA_APP_V2";
+let data;
+try{data=JSON.parse(localStorage.getItem(KEY))||{}}
+catch(e){data={}}
+
+data={
+ transactions:data.transactions||[],
+ debts:data.debts||[],
+ budget:data.budget||0,
+ goal:data.goal||null,
+ reminders:data.reminders||[],
+ pin:data.pin||"",
+ dark:!!data.dark
+};
+
+const $=id=>document.getElementById(id);
+const money=n=>"₹"+Number(n||0).toLocaleString("en-IN");
+const today=()=>new Date().toISOString().slice(0,10);
+
+function save(){
+ localStorage.setItem(KEY,JSON.stringify(data));
+ render();
+}
+function go(id,btn){
+ document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
+ $(id).classList.add("active");
+ document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));
+ if(btn)btn.classList.add("active");
+ else [...document.querySelectorAll("nav button")]
+ .find(x=>x.getAttribute("onclick")?.includes("'"+id+"'"))?.classList.add("active");
+ window.scrollTo(0,0);
+}
+function safe(s){
+ return String(s).replace(/[&<>"']/g,c=>({
+ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+ })[c]);
+}
+
+function addRecord(){
+ const type=$("type").value;
+ const name=$("name").value.trim();
+ const amount=Number($("amount").value);
+ if(!name||!Number.isFinite(amount)||amount<=0){
+ alert("Enter correct details");return;
+ }
+ const x={
+ id:Date.now()+Math.random(),type,name,amount,
+ date:$("date").value||today(),
+ category:$("category").value
+ };
+ if(type==="receive"||type==="pay"){
+ data.debts.unshift({...x,paid:false});
+ }else{
+ data.transactions.unshift(x);
+ }
+ $("name").value="";
+ $("amount").value="";
+ $("category").value="";
+ save();
+ alert("Record Saved!");
+ go("home");
+}
+
+function saveBudget(){
+ const n=Number($("budgetInput").value);
+ if(!Number.isFinite(n)||n<0)return alert("Valid budget daalo");
+ data.budget=n;save();alert("Budget saved!");
+}
+
+function settle(id){
+ const x=data.debts.find(x=>x.id===id);
+ if(!x)return;
+ x.paid=true;save();
+}
+function removeDebt(id){
+ if(!confirm("Delete record?"))return;
+ data.debts=data.debts.filter(x=>x.id!==id);save();
+}
+function deleteTransaction(id){
+ if(!confirm("Delete transaction?"))return;
+ data.transactions=data.transactions.filter(x=>x.id!==id);save();
+}
+function editTransaction(id){
+ const x=data.transactions.find(x=>x.id===id);
+ if(!x)return;
+ const n=prompt("Enter name",x.name);
+ if(n===null)return;
+ const a=Number(prompt("Enter amount",x.amount));
+ if(!n.trim()||!Number.isFinite(a)||a<=0)return;
+ x.name=n.trim();x.amount=a;save();
+}
+function toggleDark(){
+ document.body.style.background=document.body.dataset.dark==="yes"?"#f4f6fa":"#101827";
+ document.body.style.color=document.body.dataset.dark==="yes"?"#18243a":"white";
+ document.body.dataset.dark=document.body.dataset.dark==="yes"?"no":"yes";
+}
+
+function backup(){
+ const b=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+ const u=URL.createObjectURL(b);
+ const a=document.createElement("a");
+ a.href=u;a.download="YOUR-KHATA-BACKUP.json";a.click();
+ URL.revokeObjectURL(u);
+}
+function restore(e){
+ const f=e.target.files[0];if(!f)return;
+ const r=new FileReader();
+ r.onload=()=>{
+ try{
+ const d=JSON.parse(r.result);
+ if(!Array.isArray(d.transactions)||!Array.isArray(d.debts))throw 0;
+ if(confirm("Replace current data with backup?")){
+ data={...data,...d};save();alert("Restored!");
+ }
+ }catch(err){alert("Invalid backup")}
+ };
+ r.readAsText(f);
+}
+function setPin(){
+ const p=$("pin").value;
+ if(!/^\d{4}$/.test(p))return alert("Enter 4 digit PIN");
+ data.pin=p;save();alert("PIN saved!");
+}
+function removePin(){
+ if(!confirm("Remove PIN?"))return;
+ data.pin="";save();alert("PIN removed");
+}
+function unlock(){
+ if($("checkPin").value===data.pin){
+ $("pinModal").style.display="none";
+ }else $("pinMessage").textContent="Wrong PIN!";
+}
+function saveGoal(){
+ const name=$("goalName").value.trim();
+ const target=Number($("goalTarget").value);
+ const saved=Number($("goalSaved").value);
+ if(!name||target<=0||saved<0)return alert("Enter correct goal");
+ data.goal={name,target,saved};save();
+}
+function addReminder(){
+ const name=$("remName").value.trim();
+ const date=$("remDate").value;
+ if(!name||!date)return alert("Enter name and date");
+ data.reminders.push({id:Date.now(),name,date,done:false});
+ $("remName").value="";save();
+}
+function render(){
+ const month=today().slice(0,7);
+ const tx=data.transactions;
+ const inc=tx.filter(x=>x.type==="income"&&x.date.startsWith(month)).reduce((s,x)=>s+x.amount,0);
+ const exp=tx.filter(x=>x.type==="expense"&&x.date.startsWith(month)).reduce((s,x)=>s+x.amount,0);
+ const balance=tx.filter(x=>x.type==="income").reduce((s,x)=>s+x.amount,0)
+ -tx.filter(x=>x.type==="expense").reduce((s,x)=>s+x.amount,0);
+ $("balance").textContent=money(balance);
+ $("income").textContent=money(inc);
+ $("expense").textContent=money(exp);
+ $("budgetSpent").textContent=money(exp);
+ $("budgetText").textContent=money(data.budget)+" monthly budget";
+ $("budgetBar").style.width=(data.budget?Math.min(100,exp/data.budget*100):0)+"%";
+ $("budgetInput").value=data.budget||"";
+
+ const recent=tx.slice(0,5);
+ $("recent").innerHTML=recent.map(x=>`
+ <div class="transaction">
+ <div class="symbol ${x.type==="income"?"green":"orange"}">${x.type==="income"?"↙":"🛒"}</div>
+ <div><b>${safe(x.name)}</b><br><small>${safe(x.category||x.type)} • ${safe(x.date)}</small></div>
+ <div class="money ${x.type==="income"?"income":"red"}">
+ ${x.type==="income"?"+":"-"}${money(x.amount)}
+ </div>
+ </div>`).join("")||"No transactions yet";
+
+ const m=$("month").value||month;
+ const mt=tx.filter(x=>x.date.startsWith(m));
+ const mi=mt.filter(x=>x.type==="income").reduce((s,x)=>s+x.amount,0);
+ const me=mt.filter(x=>x.type==="expense").reduce((s,x)=>s+x.amount,0);
+ $("statIncome").textContent=money(mi);
+ $("statExpense").textContent=money(me);
+ const max=Math.max(mi,me,1);
+ $("chart").innerHTML=`
+ <p>Income: ${money(mi)}</p>
+ <div class="bar"><div class="fill" style="width:${mi/max*100}%"></div></div>
+ <p>Expenses: ${money(me)}</p>
+ <div class="bar"><div class="fill" style="width:${me/max*100}%;background:#e88b68"></div></div>`;
+ $("allTransactions").innerHTML=tx.filter(x=>x.date.startsWith(m)).map(x=>`
+ <div class="item">
+ <div class="row"><b>${safe(x.name)}</b><b>${money(x.amount)}</b></div>
+ <small>${safe(x.date)} • ${safe(x.type)}</small>
+ <div class="row">
+ <button class="action" onclick="editTransaction(${x.id})">Edit</button>
+ <button class="action delete" onclick="deleteTransaction(${x.id})">Delete</button>
+ </div></div>`).join("")||"No records";
+
+ const receive=data.debts.filter(x=>x.type==="receive"&&!x.paid).reduce((s,x)=>s+x.amount,0);
+ const pay=data.debts.filter(x=>x.type==="pay"&&!x.paid).reduce((s,x)=>s+x.amount,0);
+ $("toReceive").textContent=money(receive);
+ $("toPay").textContent=money(pay);
+ $("udharTotal")?.textContent;
+ $("debts").innerHTML=data.debts.filter(x=>(x.name).toLowerCase().includes($("search").value.toLowerCase())).map(x=>`
+ <div class="item">
+ <b>${safe(x.name)}</b><br>
+ <small>${x.type==="receive"?"To Receive":"To Pay"}</small>
+ <h3>${money(x.amount)}</h3>
+ <small>${safe(x.date)}</small>
+ <p>${x.paid?"Settled":"Pending"}</p>
+ <div class="row">
+ ${x.paid?"":`<button class="action" onclick="settle(${x.id})">Paid</button>`}
+ <button class="action delete" onclick="removeDebt(${x.id})">Delete</button>
+ </div></div>`).join("")||"No udhar records";
+
+ $("goalView").innerHTML=data.goal?`
+ <div class="item"><b>${safe(data.goal.name)}</b>
+ <p>${money(data.goal.saved)} / ${money(data.goal.target)}</p>
+ <div class="bar"><div class="fill" style="width:${Math.min(100,data.goal.saved/data.goal.target*100)}%"></div></div>
+ </div>`:"No goal yet";
+
+ $("reminders").innerHTML=data.reminders.map(x=>`
+ <div class="item">${safe(x.name)}<br><small>${safe(x.date)}</small>
+ <button class="action delete" onclick="data.reminders=data.reminders.filter(r=>r.id!==${x.id});save()">Delete</button>
+ </div>`).join("")||"No reminders";
+}
+$("date").value=today();
+$("month").value=today().slice(0,7);
+$("remDate").value=today();
+render();
+
+if(data.pin){
+ $("pinModal").style.display="flex";
+}
+</script>
+</body>
+</html>
+let d = JSON.parse(localStorage.getItem("YOUR_KHATA_APP_V2") || "{}");
+d.pin = "";
+localStorage.setItem("YOUR_KHATA_APP_V2", JSON.stringify(d));
+location.reload();
+const photo=$("profilePhoto");
+
+if(data.profilePhoto){
+ photo.src=data.profilePhoto;
+ photo.classList.remove("hidden");
+ $("photoInitial").classList.add("hidden");
+}else{
+ photo.classList.add("hidden");
+ $("photoInitial").classList.remove("hidden");
+}
